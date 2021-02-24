@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\PhotoController;
+use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
+use NunoMaduro\Collision\Adapters\Laravel\Commands\TestCommand;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +19,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/qwerty', function () {
+    return view('qwerty');
+});
+
+Route::get('/test', 'TestController@index');
+Route::get('/testaja', 'TestController@testaja');
+
+Route::resource('photos', 'PhotoController'::class);
