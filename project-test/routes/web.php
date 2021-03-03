@@ -24,7 +24,7 @@ Route::get('/qwerty', function () {
     return view('qwerty');
 });
 
-Route::get('/test', 'TestController@index');
-Route::get('/testaja', 'TestController@testaja');
+Route::get('/product', 'ProductController@index');
+Route::get('/testaja', 'ProductController@testaja');
 
 Route::resource('photos', 'PhotoController'::class);
